@@ -1,19 +1,38 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon px-3">
-  <%= link_to root_path do %>
-    <%= image_tag "popcorn.png", alt: "alttext", class: "logo" %>
-  <% end %>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<div class="fixed-top">
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" data-controller="navbar"  data-action="scroll@window->navbar#updateNavbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://images-platform.99static.com//52AJj1FDoFRvc2Xa2u7UOfokKZ0=/1074x2663:1981x3570/fit-in/500x500/99designs-contests-attachments/98/98853/attachment_98853133" />
+  </a>
+      <h1><strong>Your Watch List!</strong></h1>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav me-auto">
-      <li class="nav-item active">
-        <%= link_to "My lists", root_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item active">
-        <%= link_to "New list", new_list_path, class: "nav-link" %>
-      </li>
-    </ul>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item active">
+              <%= link_to "Home", lists_path, class: "btn btn-flat" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Create a movie list", new_list_path, class: "btn btn-flat" %>
+            </li>
+            <li class="nav-item dropdown">
+              <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
+              </div>
+            </li>
+            <!--li class="nav-item"-->
+            <!--/li-->
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url(https://img.freepik.com/premium-vector/caramel-popcorn-banner-ads-with-flying-corns-cinema-items-illustration_281653-549.jpg?w=1800);">
+  <div class="container">
   </div>
 </div>

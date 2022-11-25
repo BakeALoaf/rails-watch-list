@@ -1,6 +1,11 @@
 .navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+  background-color: transparent;
+  transition: 0.5s background-color ease;
+}
+
+.navbar-lewagon-white {
+  background-color: white;
+  background-image: url(popcorn.png);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +14,28 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+.banner {
+  background-size:cover;
+  position:relative;
+  height:100vh;
+}
+
+.navbar-lewagon h1 {
+  margin: 0px;
+  text-align: left;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+  font-size: 32px;
+  font-weight: bold;
+  stroke          : black;
+  stroke-width    : .5px;
+  stroke-linejoin : round;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }

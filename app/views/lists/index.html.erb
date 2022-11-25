@@ -9,16 +9,18 @@
     <h3 class="mb-0">My Lists</h3>
     <%= link_to "Create a movie list", new_list_path, class: "btn btn-flat" %>
   </div>
-  <div class="row" id="wrapper">
-    <% @lists.each do |list| %>
-      <div class="co-12 col-sm-6 col-md-4 mb-3">
-        <%= link_to list_path(list), class:"text-decoration-none" do %>
-          <div class="card-category">
-            <img src="app/assets/images/list_background.jpg" alt="">
-            <%= list.name %>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
+  <div class="wrapper">
+    <div class="row">
+      <% @lists.each do |list| %>
+        <div class="co-12 col-sm-6 col-md-4 mb-3">
+          <%= link_to list_path(list), class:"text-decoration-none" do %>
+            <div class="card-category">
+              <img src="app/assets/images/list_background.jpg" alt="">
+              <%= list.name %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
